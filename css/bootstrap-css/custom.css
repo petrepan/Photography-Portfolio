@@ -1,0 +1,331 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;800&family=Raleway:wght@300;400;500&display=swap');
+
+:root{
+    --black-text: #000;
+    --body-background: #F2F2F2;
+    --green-color: #33AA09;
+    --black2: #222325;
+    --white: #fff;
+    --font-raleway: 'Raleway', sans-serif;
+    --font-monte: Montserrat, 'san-serif';
+}
+
+body{
+    background-color: var(--body-background)!important;
+    font-family: var(--font-monte);
+}
+
+img{
+    width: 100%!important;
+    height: auto !important;
+}
+
+
+.navbarLink a{
+    font-size: 14px !important;
+    color: var(--black-text) !important;
+    font-weight: bold;
+}
+
+.jumbotron{
+    background: url(../../img/hero.png) no-repeat center center/cover !important;
+    color: var(--white);
+    height: 65vh !important;
+    width: 100% !important;
+}
+
+.jumboh1{
+    font-family: var(--font-monte);
+    font-style: normal;
+    font-weight: bold;
+    font-size: 64px;
+    line-height: 78px;
+}
+
+.brand-colored{
+    color: var(--green-color);
+}
+
+.jumbopara{
+    font-family: var(--font-raleway);
+    font-style: normal;
+    font-weight: 300;
+    font-size: 28px;
+    line-height: 34px;
+}
+
+.chevron{
+    left: 50%;
+    bottom: 0%;
+    transform: translateX(-50%);
+    width: 60px;
+    cursor: pointer;
+}
+
+.myBio{
+    background-color: var(--green-color);
+    font-family: var(--font-raleway);
+}
+
+.myBio h3{
+   font-style: normal;
+   font-weight: bold;
+   font-size: 36px;
+   line-height: 34px;
+}
+
+.myBio p{
+    font-style: normal;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 23px;
+}
+
+.gallery{
+    font-family: var(--font-raleway);
+}
+
+.gallery h4{
+    font-weight: bold;
+    color: var(--black-text);
+    font-size: 32px;
+}
+
+.gallery-imgContainer{
+    display: grid!important;
+    gap: 10px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+        "header1 header2 header3 header4"
+        "header1 middle2 middle2 middle3"
+        "foot1 foot2 foot3 middle3"
+    ;
+}
+
+.gallery-imgContainer div:first-child{
+    grid-area: header1;
+}
+
+.gallery-imgContainer div:nth-child(2){
+    grid-area: header2;
+}
+
+.gallery-imgContainer div:nth-child(3){
+    grid-area: header3;
+}
+
+.gallery-imgContainer div:nth-child(4) {
+    grid-area: header4;
+}
+
+.gallery-imgContainer div:nth-child(5) {
+    grid-area: middle2;
+}
+
+.gallery-imgContainer div:nth-child(6) {
+    grid-area: middle3;
+}
+
+.gallery-imgContainer div:nth-child(7){
+    grid-area: foot1;
+}
+
+.gallery-imgContainer div:nth-child(8) {
+    grid-area: foot2;
+}
+
+.gallery-imgContainer div{
+    position: relative;
+    transition: all 2s;
+}
+
+.gallery-imgContainer .overlayspan{
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    font-size: 60px;
+    color: #F2F2F2;
+    background-color: var(--black-text);
+    opacity: 0;
+    z-index: 2;
+}
+
+.gallery-imgContainer div:hover .overlayspan{
+    opacity: .7;
+    cursor: pointer;
+}
+
+.gallery-tab .active{
+    color: var(--green-color);
+}
+
+.gallery-tab a{
+    font-size: 14px;
+    color: var(--black-text);
+    font-weight: bold;
+    font-family: var(--font-monte);
+}
+
+.progress-details{
+    background-color: var(--green-color);
+}
+
+.iconreducer{
+    width: 50px;
+    height: 50px;
+    padding: 10px;
+}
+
+.progressnum{
+    font-size: 22px;
+    margin: 0 !important;
+}
+
+footer{
+    background: #000!important;
+    font-family: var(--font-raleway);
+}
+
+.get-in-touch h4{
+    font-size: 2rem;
+    margin-bottom: 10px!important;
+}
+
+.get-in-touch p{
+    font-size: 1.1rem;
+    opacity: .6;
+}
+
+.contactcontainer{
+    padding: 40px;
+}
+
+.contactpng{
+    width: 50px;
+    height: 50px;
+    margin: 0 auto;
+}
+
+.form{
+    width: 75%;
+    padding: 15px;
+}
+
+.form input:not(.submitbtn){
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #F2F2F2;
+    outline: none;
+    font-size: 14px;
+    color: var(--white);
+    margin: 5px;
+}
+
+.msglabel{
+    top: -70%;
+    font-size: 14px;
+    color: var(--white);
+    opacity: .5;
+    padding-left: 5px;
+}
+
+.form input::placeholder{
+    color: var(--white);
+    opacity: .5;
+}
+
+.submitbtn{
+    background-color: var(--green-color);
+    border: none;
+    color: var(--white);
+    padding: 8px 13px;
+    border-radius: 10px;
+    margin: 20px;
+    font-family: var(--font-raleway);
+}
+
+
+@media screen and (max-width: 700px){
+    .jumboh1 {
+        font-size: 34px;
+        line-height: normal;
+    }
+
+    .jumbopara{
+        font-size: 20px;
+    }
+
+    .myBio h3 {
+        font-size: 30px;
+    }
+
+    .myBio p {
+        font-size: 18px;
+        line-height: normal;
+    }
+
+
+    .chevron{
+        display: none;
+    }
+
+    .gallery-tab a {
+        font-size: 12px;
+    }
+
+    .gallery-imgContainer{
+        grid-template-columns: 1fr;
+         grid-template-areas: "header1"
+         "header2"
+         "header3"
+         "header4"
+         "middle2"
+         "middle3"
+         "foot1"
+         "foot2"
+         "foot3"
+         ;
+    }
+
+    .gallery-imgContainer div{
+        height: 350px;
+        width: 100%;
+    }
+
+    .gallery-imgContainer img{
+        max-width: 100%;
+        object-fit: cover;
+        object-position: top;
+        height: 100%!important;
+    }
+    
+    .detailscontainer{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .get-in-touch h4 {
+        font-size: 24px;
+    }
+
+    .get-in-touch p {
+        font-size: 14px;
+        opacity: .6;
+    }
+
+    .contactdetails{
+        flex-direction: column;
+    }
+
+    .formdetails h4{
+        font-size: 22px;
+    }
+
+    .form{
+        width: 100% !important;
+    }
+}
